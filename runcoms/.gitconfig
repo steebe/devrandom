@@ -1,0 +1,25 @@
+[core]
+	user = steebe
+	email = steve@stevebass.me
+[user]
+	name = SteveBass
+	email = steve@stevebass.me
+[merge]
+    tool = kdiff3
+    conflictstyle = diff3
+[mergetool "kdiff3"]
+    path = /Applications/kdiff3.app
+    trustExitCode = false
+    keepBackup = false
+[diff]
+    algorithm = histogram
+    renames = copies
+    compactionHeuristic = true
+[rerere]
+    enabled = true
+[rebase]
+    autostash = true
+    interactive = true
+[pull]
+    autostash = true
+    rebase = true
