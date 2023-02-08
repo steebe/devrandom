@@ -134,3 +134,42 @@ system_profiler SPSoftwareDataType prints an overview of the software of the cur
 system_profiler SPPowerDataType prints power and battery information, including the current AC wattage and battery cycle count.
 
 system_profiler SPDeveloperToolsDataType prints the currently active version of the Xcode developer tools and SDK.
+
+---
+
+HackerNews:
+
+	
+strogonoff 1 day ago | next [–]
+
+You can use sips together with iconutil to generate a complete .icns file for your app from a single 1024 by 1024 PNG without any third party software:
+    mkdir MyIcon.iconset
+    cp Icon1024.png MyIcon.iconset/icon_512x512@2x.png
+    sips -z 16 16     Icon1024.png --out MyIcon.iconset/icon_16x16.png
+    sips -z 32 32     Icon1024.png --out MyIcon.iconset/icon_16x16@2x.png
+    sips -z 32 32     Icon1024.png --out MyIcon.iconset/icon_32x32.png
+    sips -z 64 64     Icon1024.png --out MyIcon.iconset/icon_32x32@2x.png
+    sips -z 128 128   Icon1024.png --out MyIcon.iconset/icon_128x128.png
+    sips -z 256 256   Icon1024.png --out MyIcon.iconset/icon_128x128@2x.png
+    sips -z 256 256   Icon1024.png --out MyIcon.iconset/icon_256x256.png
+    sips -z 512 512   Icon1024.png --out MyIcon.iconset/icon_256x256@2x.png
+    sips -z 512 512   Icon1024.png --out MyIcon.iconset/icon_512x512.png
+    iconutil -c icns MyIcon.iconset
+As a bonus, generate .ico with ffmpeg:
+    ffmpeg -i MyIcon.iconset/icon_256x256.png icon.ico
+
+---
+
+sovietswag 1 day ago | prev | next [–]
+
+Needs to mention afplay for playing audio! You can easily use this to make a command-line MP3 player.
+
+---
+
+	
+BruceEel 1 day ago | prev | next [–]
+
+Nice list.
+Also, hidutil (https://developer.apple.com/library/archive/technotes/tn2450...).
+
+

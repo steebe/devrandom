@@ -23,3 +23,7 @@
 [pull]
     autostash = true
     rebase = true
+[init]
+    defaultBranch = main
+[pager]
+    branch = false
